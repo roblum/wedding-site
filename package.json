@@ -1,0 +1,34 @@
+{
+  "name": "digital-ocean",
+  "version": "0.1.2",
+  "description": "digital-ocean",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "node-mysql" : "*",
+    "mysql" : "2.0.0",
+    "cors" : "*",
+    "aws-sdk": "*",
+    "forever": "*",
+    "nodemon" : "*"
+  },
+  "devDependencies" :{
+    "nodemon" : "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roblum"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
