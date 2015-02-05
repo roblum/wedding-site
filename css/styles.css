@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-size: 13px;
+}
+div#google-maps {
+  height: 100%;
+  width: 100%;
+}
+.main-container {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+.main-container .banner-container {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  /* Banner Strip Before:After */
+}
+.main-container .banner-container .banner-left {
+  width: 0px;
+  height: 130px;
+  border-right: 70px solid #f2a797;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.main-container .banner-container .banner-right {
+  right: 0;
+}
+.main-container .banner-container .banner-left-strip {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.main-container .banner-container .banner-right-strip {
+  right: 0;
+  top: 0;
+  position: relative;
+  z-index: 1;
+}
+.main-container .banner-container .banner-left-strip:before,
+.main-container .banner-container .banner-left-strip:after,
+.main-container .banner-container .banner-right-strip:before,
+.main-container .banner-container .banner-right-strip:after {
+  content: " ";
+  position: absolute;
+  height: 0px;
+  z-index: -1;
+}
+.main-container .banner-container .banner-left-strip:before,
+.main-container .banner-container .banner-left-strip:after {
+  top: 60px;
+  left: -90px;
+  border-left: 50px solid transparent;
+}
+.main-container .banner-container .banner-left-strip:before {
+  border-top: 60px solid #f6cec7;
+  width: 50px;
+}
+.main-container .banner-container .banner-left-strip:after {
+  border-bottom: 60px solid #f6cec7;
+  width: 110px;
+  top: 120px;
+}
+.main-container .banner-container .banner-right-strip:before,
+.main-container .banner-container .banner-right-strip:after {
+  border-right: 50px solid transparent;
+}
+.main-container .banner-container .banner-right-strip:before {
+  border-top: 60px solid #f6cec7;
+  width: 70px;
+  top: -135px;
+  right: -90px;
+}
+.main-container .banner-container .banner-right-strip:after {
+  border-bottom: 60px solid #f6cec7;
+  width: 110px;
+  top: -75px;
+  right: -90px;
+}
+.main-container .banner-container .banner-date {
+  background: #f6cec7;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  font-size: 4rem;
+  line-height: 10rem;
+  padding: 0 60px;
+}
+.main-container .banner-container .banner-right {
+  width: 0px;
+  height: 130px;
+  border-left: 70px solid #f2a797;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+}
