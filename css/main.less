@@ -129,92 +129,103 @@ div#google-maps {
  * Tablets 
  */
 @media(min-width:481px){
-	.splash-container{
+	.main-container{
 
-		.banner-container{
+		.splash-container{
 
-			.banner-left{
-				height: 130px;
-				border-right: 70px solid #f2a797;
-				border-bottom: 50px solid transparent;
-			}
-			.banner-right{
-				height: 130px;
-				border-left: 70px solid #f2a797;
-				border-bottom: 50px solid transparent;
-			}
-			.banner-date{
-				line-height: 10rem;
-				padding: 0 60px;
+			.banner-container{
 
-				h2{
-					font-size: 6rem;
-				}
+				
+				
 			}
-			.banner-left-strip, {
-				position: relative;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-			.banner-right-strip{
-				right:0;
-				top: 0;
-				position: relative;
-				z-index: 1;
-			}
-	/*
-	 * Banner Strip Before:After Start
-	 */ 
-			.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
-				content: " ";
-				position: absolute;
-				height: 0px;
-				z-index: -1;
-			}
-			.banner-left-strip:before, .banner-left-strip:after{
-				top: 60px;
-				left: -90px;
-				border-left: 50px solid transparent;
-			}
-			.banner-left-strip:before{
-				border-top: 60px solid #f6cec7;
-				width: 50px;
-			}
-			.banner-left-strip:after{
-				border-bottom: 60px solid #f6cec7;
-				width: 110px;
-				top: 120px;
-			}
-			.banner-right-strip:before, .banner-right-strip:after{
-				border-right: 50px solid transparent;
-			}
-			.banner-right-strip:before{
-				border-top: 60px solid #f6cec7;
-				width: 70px;
-				top: -135px;
-				right: -90px;
-			}
-			.banner-right-strip:after {
-				border-bottom: 60px solid #f6cec7;
-				width: 110px;
-				top: -75px;
-				right: -90px;
-			}
-	/*
-	 * Banner Strip Before:After End
-	 */ 
-			
 		}
+
 	}
-
 }
-
 /*
  * Desktop
  */
 @media(min-width:769px){
+	.main-container{
+		
+		.splash-container{
 
+			.banner-container{
+
+				.banner-left{
+					height: 130px;
+					border-right: 70px solid #f2a797;
+					border-bottom: 50px solid transparent;
+				}
+				.banner-right{
+					height: 130px;
+					border-left: 70px solid #f2a797;
+					border-bottom: 50px solid transparent;
+				}
+				.banner-date{
+					line-height: 10rem;
+					padding: 0 60px;
+
+					h2{
+						font-size: 6rem;
+					}
+				}
+				.banner-left-strip, {
+					position: relative;
+					top: 0;
+					left: 0;
+					z-index: 1;
+				}
+				.banner-right-strip{
+					right:0;
+					top: 0;
+					position: relative;
+					z-index: 1;
+				}
+		/*
+		 * Banner Strip Before:After Start
+		 */ 
+				.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
+					content: " ";
+					position: absolute;
+					height: 0px;
+					z-index: -1;
+				}
+				.banner-left-strip:before, .banner-left-strip:after{
+					top: 60px;
+					left: -90px;
+					border-left: 50px solid transparent;
+				}
+				.banner-left-strip:before{
+					border-top: 60px solid #f6cec7;
+					width: 50px;
+				}
+				.banner-left-strip:after{
+					border-bottom: 60px solid #f6cec7;
+					width: 110px;
+					top: 120px;
+				}
+				.banner-right-strip:before, .banner-right-strip:after{
+					border-right: 50px solid transparent;
+				}
+				.banner-right-strip:before{
+					border-top: 60px solid #f6cec7;
+					width: 70px;
+					top: -135px;
+					right: -90px;
+				}
+				.banner-right-strip:after {
+					border-bottom: 60px solid #f6cec7;
+					width: 110px;
+					top: -75px;
+					right: -90px;
+				}
+		/*
+		 * Banner Strip Before:After End
+		 */ 
+			}
+		}
+	}
 }
 
 
