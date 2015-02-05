@@ -1,4 +1,4 @@
-var gmapStyles = [
+var gMapStyles = [
     {
         "featureType": "landscape.man_made",
         "elementType": "geometry",
