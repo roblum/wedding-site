@@ -13,7 +13,12 @@
     "cors" : "*",
     "aws-sdk": "*",
     "forever": "*",
-    "nodemon" : "*"
+    "nodemon" : "*",
+    "grunt": "~0.4.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-s3" : "^0.2.0-alpha.3",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-less": "*"
   },
   "devDependencies" :{
     "nodemon" : "*"
