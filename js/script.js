@@ -5,7 +5,7 @@
 			latitude: 40.7238493,
 			longitude: -74.0026836
 		},
-		zoom : 12
+		zoom : 13
 	}
 
 	var gMaps = {
