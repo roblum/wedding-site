@@ -16,7 +16,8 @@
 
 					$(this).addClass('animated fadeOut');
 					map.panTo(chelsea)
-					map.setZoom(16);
+					map.setZoom(15);
+					gMaps._addMarker();
 			});
 		}
 	}
@@ -46,6 +47,16 @@
 
 	      	// google.maps.event.addDomListener(window, 'load', gMaps.init);
 		},
+		_addMarker: function(){
+			var marker = new google.maps.Marker({
+			  position: new google.maps.LatLng(
+			  					gMapsData.chelseaLocation.latitude,
+			  					gMapsData.chelseaLocation.longitude
+			  	),
+			  map: map,
+			  icon: './images/lighthouse_2.png'
+			});
+		}
 	}
 
 	google.maps.event.addDomListener(window, 'load', __init__);
