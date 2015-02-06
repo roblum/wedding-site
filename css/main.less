@@ -27,6 +27,7 @@ div#google-maps {
 	top: 0;
 	left: 0;
 	background: rgba(255,255,255,0.8);
+	cursor: pointer;
 
 	.header{
 		width: 100%;
@@ -371,12 +372,7 @@ div#google-maps {
 }
 
 
-/*
-==============================================
-bounceInDown/bounceOutUp
-==============================================
-*/
-
+/// bounceInDown keyframes
 @-webkit-keyframes bounceInDown {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -445,10 +441,7 @@ bounceInDown/bounceOutUp
   }
 }
 
-.bounceInDown {
-  -webkit-animation-name: bounceInDown;
-          animation-name: bounceInDown;
-}
+// bounceOutUp keyframes
 @-webkit-keyframes bounceOutUp {
   20% {
     -webkit-transform: translate3d(0, -10px, 0);
@@ -487,12 +480,34 @@ bounceInDown/bounceOutUp
   }
 }
 
+// fadeOut keyframes
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+}
+
 .bounceOutUp {
   -webkit-animation-name: bounceOutUp;
           animation-name: bounceOutUp;
           -webkit-transition: 1s ease-out;
           transition: 1s ease-out;
 }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;

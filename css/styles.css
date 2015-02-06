@@ -21,6 +21,7 @@ div#google-maps {
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 .main-container .header {
   width: 100%;
@@ -319,11 +320,6 @@ div#google-maps {
     width: 35%;
   }
 }
-/*
-==============================================
-bounceInDown/bounceOutUp
-==============================================
-*/
 @-webkit-keyframes bounceInDown {
   0%,
   60%,
@@ -388,10 +384,6 @@ bounceInDown/bounceOutUp
     transform: none;
   }
 }
-.bounceInDown {
-  -webkit-animation-name: bounceInDown;
-  animation-name: bounceInDown;
-}
 @-webkit-keyframes bounceOutUp {
   20% {
     -webkit-transform: translate3d(0, -10px, 0);
@@ -426,11 +418,35 @@ bounceInDown/bounceOutUp
     transform: translate3d(0, -2000px, 0);
   }
 }
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
 .bounceOutUp {
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
   -webkit-transition: 1s ease-out;
   transition: 1s ease-out;
+}
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
 }
 .animated {
   -webkit-animation-duration: 1s;
