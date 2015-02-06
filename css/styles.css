@@ -219,6 +219,9 @@ div#google-maps {
     font-size: 1.7rem;
     width: 50%;
   }
+  .main-container .center-container .reception-information .location-banner h4 {
+    font-size: 1.5rem;
+  }
 }
 /*
  * Desktop
@@ -312,7 +315,10 @@ div#google-maps {
   }
   .main-container .center-container .reception-information .time-container p {
     font-size: 2.3rem;
-    width: 30%;
+    width: 40%;
+  }
+  .main-container .center-container .reception-information .location-banner h4 {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1200px) {
