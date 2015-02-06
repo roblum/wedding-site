@@ -20,48 +20,66 @@ div#google-maps {
   position: absolute;
   top: 0;
   left: 0;
+  background: rgba(255, 255, 255, 0.8);
 }
-.main-container .splash-container {
+.main-container .header {
+  width: 100%;
+  height: 4rem;
+  background: #a19be0;
+  position: absolute;
+  top: 0;
+}
+.main-container .header hr {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 6px dashed #e5e4f0;
+}
+.main-container .center-container {
   position: relative;
-  top: 20%;
+  top: 10%;
   margin: auto;
-  width: 50%;
+  width: 100%;
 }
-.main-container .splash-container .banner-container {
+.main-container .center-container .splash-container {
+  width: 65%;
+  margin: auto;
+}
+.main-container .center-container .splash-container .banner-container {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   width: 100%;
   margin: auto;
   text-align: center;
   /*
-	 * Banner Strip Before:After Start
-	 */
+		 * Banner Strip Before:After Start
+		 */
   /*
-	 * Banner Strip Before:After End
-	 */
+		 * Banner Strip Before:After End
+		 */
 }
-.main-container .splash-container .banner-container .banner-left {
+.main-container .center-container .splash-container .banner-container .banner-left {
   width: 0px;
   height: 65px;
-  border-right: 40px solid #f2a797;
+  border-right: 40px solid #a19be0;
   border-bottom: 30px solid transparent;
   position: absolute;
   z-index: 2;
   left: 0;
   top: 0;
 }
-.main-container .splash-container .banner-container .banner-right {
+.main-container .center-container .splash-container .banner-container .banner-right {
   width: 0px;
   height: 65px;
-  border-left: 40px solid #f2a797;
+  border-left: 40px solid #a19be0;
   border-bottom: 30px solid transparent;
   position: absolute;
   z-index: 2;
   right: 0;
   top: 0;
 }
-.main-container .splash-container .banner-container .banner-date {
-  background: #f6cec7;
+.main-container .center-container .splash-container .banner-container .banner-date {
+  background: #e5e4f0;
   color: #fff;
   z-index: 3;
   position: relative;
@@ -70,144 +88,235 @@ div#google-maps {
   line-height: 5rem;
   padding: 0 15px;
 }
-.main-container .splash-container .banner-container .banner-date h2 {
+.main-container .center-container .splash-container .banner-container .banner-date h2 {
   font-size: 3rem;
+  text-shadow: 1px 1px 1px #ccc;
 }
-.main-container .splash-container .banner-container .banner-left-strip {
+.main-container .center-container .splash-container .banner-container .banner-left-strip {
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
 }
-.main-container .splash-container .banner-container .banner-right-strip {
+.main-container .center-container .splash-container .banner-container .banner-right-strip {
   right: 0;
   top: 0;
   position: relative;
   z-index: 1;
 }
-.main-container .splash-container .banner-container .banner-left-strip:before,
-.main-container .splash-container .banner-container .banner-left-strip:after,
-.main-container .splash-container .banner-container .banner-right-strip:before,
-.main-container .splash-container .banner-container .banner-right-strip:after {
+.main-container .center-container .splash-container .banner-container .banner-left-strip:before,
+.main-container .center-container .splash-container .banner-container .banner-left-strip:after,
+.main-container .center-container .splash-container .banner-container .banner-right-strip:before,
+.main-container .center-container .splash-container .banner-container .banner-right-strip:after {
   content: " ";
   position: absolute;
   height: 0px;
   z-index: -1;
 }
-.main-container .splash-container .banner-container .banner-left-strip:before,
-.main-container .splash-container .banner-container .banner-left-strip:after {
+.main-container .center-container .splash-container .banner-container .banner-left-strip:before,
+.main-container .center-container .splash-container .banner-container .banner-left-strip:after {
   top: 35px;
   left: -50px;
   border-left: 30px solid transparent;
 }
-.main-container .splash-container .banner-container .banner-left-strip:before {
-  border-top: 30px solid #f6cec7;
+.main-container .center-container .splash-container .banner-container .banner-left-strip:before {
+  border-top: 30px solid #e5e4f0;
   width: 30px;
 }
-.main-container .splash-container .banner-container .banner-left-strip:after {
-  border-bottom: 30px solid #f6cec7;
+.main-container .center-container .splash-container .banner-container .banner-left-strip:after {
+  border-bottom: 30px solid #e5e4f0;
   width: 60px;
   top: 65px;
 }
-.main-container .splash-container .banner-container .banner-right-strip:before,
-.main-container .splash-container .banner-container .banner-right-strip:after {
+.main-container .center-container .splash-container .banner-container .banner-right-strip:before,
+.main-container .center-container .splash-container .banner-container .banner-right-strip:after {
   border-right: 30px solid transparent;
 }
-.main-container .splash-container .banner-container .banner-right-strip:before {
-  border-top: 30px solid #f6cec7;
+.main-container .center-container .splash-container .banner-container .banner-right-strip:before {
+  border-top: 30px solid #e5e4f0;
   width: 60px;
   top: -60px;
   right: -50px;
 }
-.main-container .splash-container .banner-container .banner-right-strip:after {
-  border-bottom: 30px solid #f6cec7;
+.main-container .center-container .splash-container .banner-container .banner-right-strip:after {
+  border-bottom: 30px solid #e5e4f0;
   width: 60px;
   top: -30px;
   right: -50px;
 }
+.main-container .center-container .reception-information {
+  text-align: center;
+  position: relative;
+  top: -25px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  width: 90%;
+  margin: auto;
+}
+.main-container .center-container .reception-information h2 {
+  color: #a19be0;
+}
+.main-container .center-container .reception-information .cursive {
+  font-family: 'Norican', cursive;
+  text-transform: none;
+  font-size: 1.5rem;
+  letter-spacing: 1.8px;
+  text-shadow: 1px 1px 3px #ccc;
+}
+.main-container .center-container .reception-information .time-container hr,
+.main-container .center-container .reception-information .time-container p {
+  display: inline-block;
+}
+.main-container .center-container .reception-information .time-container hr {
+  border: 0px;
+  border-bottom: 1px solid black;
+  width: 10%;
+}
+.main-container .center-container .reception-information .time-container p {
+  letter-spacing: -0.3px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  text-shadow: 1px 1px 1px #ccc;
+  width: 55%;
+}
+.main-container .center-container .reception-information .location-banner {
+  background: #e5e4f0;
+  text-shadow: 1px 1px 1px #ccc;
+}
+.main-container .center-container .reception-information .location-banner .left-wing:before,
+.main-container .center-container .reception-information .location-banner .left-wing:after,
+.main-container .center-container .reception-information .location-banner .right-wing:before,
+.main-container .center-container .reception-information .location-banner .right-wing:after {
+  position: absolute;
+  content: " ";
+  z-index: 4;
+  height: 0px;
+  width: 20px;
+}
+.main-container .center-container .reception-information .location-banner .left-wing {
+  position: relative;
+}
+.main-container .center-container .reception-information .location-banner .left-wing:before {
+  border-top: 20px solid #e5e4f0;
+  border-left: 15px solid transparent;
+  left: -20px;
+}
+.main-container .center-container .reception-information .location-banner h4 {
+  color: #fff;
+}
 /*
  * Tablets 
  */
+@media (min-width: 481px) {
+  .main-container .center-container .reception-information {
+    top: -30px;
+  }
+  .main-container .center-container .reception-information h2 {
+    font-size: 2rem;
+  }
+  .main-container .center-container .reception-information .time-container p {
+    font-size: 1.7rem;
+    width: 50%;
+  }
+}
 /*
  * Desktop
  */
 @media (min-width: 769px) {
-  .main-container .splash-container .banner-container {
-    /*
-		 * Banner Strip Before:After Start
-		 */
-    /*
-		 * Banner Strip Before:After End
-		 */
+  .main-container .center-container .splash-container {
+    width: 50%;
   }
-  .main-container .splash-container .banner-container .banner-left {
+  .main-container .center-container .splash-container .banner-container {
+    /*
+			 * Banner Strip Before:After Start
+			 */
+    /*
+			 * Banner Strip Before:After End
+			 */
+  }
+  .main-container .center-container .splash-container .banner-container .banner-left {
     height: 130px;
-    border-right: 70px solid #f2a797;
+    border-right: 70px solid #a19be0;
     border-bottom: 50px solid transparent;
   }
-  .main-container .splash-container .banner-container .banner-right {
+  .main-container .center-container .splash-container .banner-container .banner-right {
     height: 130px;
-    border-left: 70px solid #f2a797;
+    border-left: 70px solid #a19be0;
     border-bottom: 50px solid transparent;
   }
-  .main-container .splash-container .banner-container .banner-date {
+  .main-container .center-container .splash-container .banner-container .banner-date {
     line-height: 10rem;
     padding: 0 60px;
   }
-  .main-container .splash-container .banner-container .banner-date h2 {
+  .main-container .center-container .splash-container .banner-container .banner-date h2 {
     font-size: 6rem;
   }
-  .main-container .splash-container .banner-container .banner-left-strip {
+  .main-container .center-container .splash-container .banner-container .banner-left-strip {
     position: relative;
     top: 0;
     left: 0;
     z-index: 1;
   }
-  .main-container .splash-container .banner-container .banner-right-strip {
+  .main-container .center-container .splash-container .banner-container .banner-right-strip {
     right: 0;
     top: 0;
     position: relative;
     z-index: 1;
   }
-  .main-container .splash-container .banner-container .banner-left-strip:before,
-  .main-container .splash-container .banner-container .banner-left-strip:after,
-  .main-container .splash-container .banner-container .banner-right-strip:before,
-  .main-container .splash-container .banner-container .banner-right-strip:after {
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:before,
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:after,
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:before,
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:after {
     content: " ";
     position: absolute;
     height: 0px;
     z-index: -1;
   }
-  .main-container .splash-container .banner-container .banner-left-strip:before,
-  .main-container .splash-container .banner-container .banner-left-strip:after {
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:before,
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:after {
     top: 60px;
     left: -90px;
     border-left: 50px solid transparent;
   }
-  .main-container .splash-container .banner-container .banner-left-strip:before {
-    border-top: 60px solid #f6cec7;
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:before {
+    border-top: 60px solid #e5e4f0;
     width: 50px;
   }
-  .main-container .splash-container .banner-container .banner-left-strip:after {
-    border-bottom: 60px solid #f6cec7;
+  .main-container .center-container .splash-container .banner-container .banner-left-strip:after {
+    border-bottom: 60px solid #e5e4f0;
     width: 110px;
     top: 120px;
   }
-  .main-container .splash-container .banner-container .banner-right-strip:before,
-  .main-container .splash-container .banner-container .banner-right-strip:after {
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:before,
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:after {
     border-right: 50px solid transparent;
   }
-  .main-container .splash-container .banner-container .banner-right-strip:before {
-    border-top: 60px solid #f6cec7;
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:before {
+    border-top: 60px solid #e5e4f0;
     width: 70px;
     top: -135px;
     right: -90px;
   }
-  .main-container .splash-container .banner-container .banner-right-strip:after {
-    border-bottom: 60px solid #f6cec7;
+  .main-container .center-container .splash-container .banner-container .banner-right-strip:after {
+    border-bottom: 60px solid #e5e4f0;
     width: 110px;
     top: -75px;
     right: -90px;
+  }
+  .main-container .center-container .reception-information {
+    top: -55px;
+  }
+  .main-container .center-container .reception-information h2 {
+    font-size: 3rem;
+  }
+  .main-container .center-container .reception-information .time-container p {
+    font-size: 2.3rem;
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container .center-container .splash-container {
+    width: 35%;
   }
 }
 /*

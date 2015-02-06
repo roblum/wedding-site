@@ -1,3 +1,9 @@
+@lpurple : #e5e4f0;
+@dpurple : #a19be0;
+
+@lpink : #f6cec7;
+@dpink : #f2a797;
+
 html, body{
 	width: 100%;
 	height: 100%;
@@ -20,154 +26,72 @@ div#google-maps {
 	position: absolute;
 	top: 0;
 	left: 0;
+	background: rgba(255,255,255,0.8);
 
-	.splash-container{
-		position: relative;
-		top: 20%;
-		margin: auto;
-		width: 50%;
+	.header{
+		width: 100%;
+		height: 4rem;
+		background: @dpurple;
+		position: absolute;
+		top: 0;
 
-		.banner-container{
-			font-family: 'Open Sans', sans-serif;
-			position: relative;
+		hr{
+			position: absolute;
+			bottom: 0;
 			width: 100%;
-			margin: auto;
-			text-align: center;
-
-			.banner-left{
-				width: 0px;
-				height: 65px;
-				border-right: 40px solid #f2a797;
-				border-bottom: 30px solid transparent;
-				position: absolute;
-				z-index: 2;
-				left: 0;
-				top: 0;
-			}
-			.banner-right{
-				width: 0px;
-				height: 65px;
-				border-left: 40px solid #f2a797;
-				border-bottom: 30px solid transparent;
-				position: absolute;
-				z-index: 2;
-				right: 0;
-				top: 0;
-			}
-			.banner-date{
-				background: #f6cec7;
-				color: #fff;
-				z-index: 3;
-				position: relative;
-				line-height: 4rem;
-				padding: 0 30px;
-				line-height: 5rem;
-				padding: 0 15px;
-
-				h2{
-					font-size: 3rem;
-				}
-			}
-			.banner-left-strip, {
-				position: relative;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-			.banner-right-strip{
-				right:0;
-				top: 0;
-				position: relative;
-				z-index: 1;
-			}
-	/*
-	 * Banner Strip Before:After Start
-	 */ 
-			.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
-				content: " ";
-				position: absolute;
-				height: 0px;
-				z-index: -1;
-			}
-			.banner-left-strip:before, .banner-left-strip:after{
-				top: 35px;
-				left: -50px;
-				border-left: 30px solid transparent;
-			}
-			.banner-left-strip:before{
-				border-top: 30px solid #f6cec7;
-				width: 30px;
-			}
-			.banner-left-strip:after{
-				border-bottom: 30px solid #f6cec7;
-				width: 60px;
-				top: 65px;
-			}
-			.banner-right-strip:before, .banner-right-strip:after{
-				border-right: 30px solid transparent;
-			}
-			.banner-right-strip:before{
-				border-top: 30px solid #f6cec7;
-				width: 60px;
-				top: -60px;
-				right: -50px;
-			}
-			.banner-right-strip:after {
-				border-bottom: 30px solid #f6cec7;
-				width: 60px;
-				top: -30px;
-				right: -50px;
-			}
-	/*
-	 * Banner Strip Before:After End
-	 */ 
-
+			border-top: 6px dashed @lpurple;
 		}
 	}
-}
-/*
- * Tablets 
- */
-@media(min-width:481px){
-	.main-container{
-
-		.splash-container{
-
-			.banner-container{
-
-				
-				
-			}
-		}
-
-	}
-}
-/*
- * Desktop
- */
-@media(min-width:769px){
-	.main-container{
+	.center-container{
+		position: relative;
+		top: 10%;
+		margin: auto;
+		width: 100%;
 		
-		.splash-container{
+		.splash-container{	
+			width: 65%;
+			margin: auto;
 
 			.banner-container{
+				font-family: 'Open Sans', sans-serif;
+				position: relative;
+				width: 100%;
+				margin: auto;
+				text-align: center;
 
 				.banner-left{
-					height: 130px;
-					border-right: 70px solid #f2a797;
-					border-bottom: 50px solid transparent;
+					width: 0px;
+					height: 65px;
+					border-right: 40px solid @dpurple;
+					border-bottom: 30px solid transparent;
+					position: absolute;
+					z-index: 2;
+					left: 0;
+					top: 0;
 				}
 				.banner-right{
-					height: 130px;
-					border-left: 70px solid #f2a797;
-					border-bottom: 50px solid transparent;
+					width: 0px;
+					height: 65px;
+					border-left: 40px solid @dpurple;
+					border-bottom: 30px solid transparent;
+					position: absolute;
+					z-index: 2;
+					right: 0;
+					top: 0;
 				}
 				.banner-date{
-					line-height: 10rem;
-					padding: 0 60px;
+					background: @lpurple;
+					color: #fff;
+					z-index: 3;
+					position: relative;
+					line-height: 4rem;
+					padding: 0 30px;
+					line-height: 5rem;
+					padding: 0 15px;
 
 					h2{
-						font-size: 6rem;
+						font-size: 3rem;
+						text-shadow: 1px 1px 1px #ccc;
 					}
 				}
 				.banner-left-strip, {
@@ -192,37 +116,255 @@ div#google-maps {
 					z-index: -1;
 				}
 				.banner-left-strip:before, .banner-left-strip:after{
-					top: 60px;
-					left: -90px;
-					border-left: 50px solid transparent;
+					top: 35px;
+					left: -50px;
+					border-left: 30px solid transparent;
 				}
 				.banner-left-strip:before{
-					border-top: 60px solid #f6cec7;
-					width: 50px;
+					border-top: 30px solid @lpurple;
+					width: 30px;
 				}
 				.banner-left-strip:after{
-					border-bottom: 60px solid #f6cec7;
-					width: 110px;
-					top: 120px;
+					border-bottom: 30px solid @lpurple;
+					width: 60px;
+					top: 65px;
 				}
 				.banner-right-strip:before, .banner-right-strip:after{
-					border-right: 50px solid transparent;
+					border-right: 30px solid transparent;
 				}
 				.banner-right-strip:before{
-					border-top: 60px solid #f6cec7;
-					width: 70px;
-					top: -135px;
-					right: -90px;
+					border-top: 30px solid @lpurple;
+					width: 60px;
+					top: -60px;
+					right: -50px;
 				}
 				.banner-right-strip:after {
-					border-bottom: 60px solid #f6cec7;
-					width: 110px;
-					top: -75px;
-					right: -90px;
+					border-bottom: 30px solid @lpurple;
+					width: 60px;
+					top: -30px;
+					right: -50px;
 				}
 		/*
 		 * Banner Strip Before:After End
 		 */ 
+
+			}
+		}
+
+
+		.reception-information{
+			text-align: center;
+			position: relative;
+			top: -25px;
+			font-family: 'Roboto', sans-serif;
+			text-transform: uppercase;
+			width: 90%;
+			margin: auto;
+
+			h2{
+				color: @dpurple;
+			}
+			.cursive{
+				font-family: 'Norican', cursive;
+				text-transform: none;
+				font-size: 1.5rem;
+				letter-spacing: 1.8px;
+				text-shadow: 1px 1px 3px #ccc;
+			}	
+			.time-container{
+
+				hr, p{
+					display: inline-block;
+				}
+				hr{
+					border: 0px;
+					border-bottom: 1px solid black;
+					width: 10%;
+				}
+				p{
+					letter-spacing: -0.3px;
+					font-size: 1.3rem;
+					font-weight: 100;
+					text-shadow: 1px 1px 1px #ccc;
+					width: 55%;
+				}
+			}
+			.location-banner{
+				background: @lpurple;
+				text-shadow: 1px 1px 1px #ccc;
+
+				.left-wing:before, .left-wing:after, .right-wing:before, .right-wing:after {
+					position: absolute;
+					content: " ";
+					z-index: 4;
+					height: 0px;
+					width: 20px;
+				}
+
+				.left-wing{
+					position: relative;
+				}
+				.left-wing:before{
+					border-top: 20px solid @lpurple;
+					border-left: 15px solid transparent;
+					left: -20px;
+				}
+
+				h4{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+/*
+ * Tablets 
+ */
+@media(min-width:481px){
+	.main-container{
+
+		.center-container{
+
+			.splash-container{
+
+				.banner-container{
+
+					
+					
+				}
+			}
+
+			.reception-information{
+				top: -30px;
+
+				h2{
+					font-size: 2rem;
+				}
+				.time-container{
+
+					p{
+						font-size: 1.7rem;
+						width: 50%;
+					}
+				}
+			}
+		}
+
+	}
+}
+/*
+ * Desktop
+ */
+@media(min-width:769px){
+	.main-container{
+
+		.center-container{
+
+			.splash-container{
+				width: 50%;
+
+				.banner-container{
+
+					.banner-left{
+						height: 130px;
+						border-right: 70px solid @dpurple;
+						border-bottom: 50px solid transparent;
+					}
+					.banner-right{
+						height: 130px;
+						border-left: 70px solid @dpurple;
+						border-bottom: 50px solid transparent;
+					}
+					.banner-date{
+						line-height: 10rem;
+						padding: 0 60px;
+
+						h2{
+							font-size: 6rem;
+						}
+					}
+					.banner-left-strip, {
+						position: relative;
+						top: 0;
+						left: 0;
+						z-index: 1;
+					}
+					.banner-right-strip{
+						right:0;
+						top: 0;
+						position: relative;
+						z-index: 1;
+					}
+			/*
+			 * Banner Strip Before:After Start
+			 */ 
+					.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
+						content: " ";
+						position: absolute;
+						height: 0px;
+						z-index: -1;
+					}
+					.banner-left-strip:before, .banner-left-strip:after{
+						top: 60px;
+						left: -90px;
+						border-left: 50px solid transparent;
+					}
+					.banner-left-strip:before{
+						border-top: 60px solid @lpurple;
+						width: 50px;
+					}
+					.banner-left-strip:after{
+						border-bottom: 60px solid @lpurple;
+						width: 110px;
+						top: 120px;
+					}
+					.banner-right-strip:before, .banner-right-strip:after{
+						border-right: 50px solid transparent;
+					}
+					.banner-right-strip:before{
+						border-top: 60px solid @lpurple;
+						width: 70px;
+						top: -135px;
+						right: -90px;
+					}
+					.banner-right-strip:after {
+						border-bottom: 60px solid @lpurple;
+						width: 110px;
+						top: -75px;
+						right: -90px;
+					}
+			/*
+			 * Banner Strip Before:After End
+			 */ 
+				}
+			}
+
+			.reception-information{
+				top: -55px;
+
+				h2{
+					font-size: 3rem;
+				}
+				.time-container{
+
+					p{
+						font-size: 2.3rem;
+						width: 30%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(min-width:1200px){
+	.main-container{
+
+		.center-container{
+
+			.splash-container{
+				width: 35%;
+
 			}
 		}
 	}
