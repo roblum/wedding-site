@@ -43,7 +43,7 @@ div#google-maps {
   text-align: center;
   font-family: 'Satisfy', cursive;
   color: #8c489f;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-shadow: 1px 1px 1px #ccc;
 }
 .main-container .header {
@@ -187,8 +187,8 @@ div#google-maps {
 .main-container .center-container .reception-information .cursive {
   font-family: 'Satisfy', cursive;
   text-transform: none;
-  font-size: 1.5rem;
-  letter-spacing: 1.8px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   text-shadow: 1px 1px 3px #ccc;
 }
 .main-container .center-container .reception-information .time-container hr,
@@ -205,12 +205,12 @@ div#google-maps {
   font-size: 1.3rem;
   font-weight: 100;
   text-shadow: 1px 1px 1px #ccc;
-  width: 55%;
+  width: 60%;
 }
 .main-container .center-container .reception-information .location-banner {
   background: #c3c3e5;
   text-shadow: 1px 1px 1px #ccc;
-  width: 75%;
+  width: 85%;
   margin: auto;
 }
 .main-container .center-container .reception-information .location-banner .left-wing:before,
