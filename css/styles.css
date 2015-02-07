@@ -33,6 +33,7 @@ div#google-maps {
   font-family: 'Satisfy', cursive;
   color: #8c489f;
   font-size: 2rem;
+  text-shadow: 1px 1px 1px #ccc;
 }
 .main-container .header {
   width: 100%;
@@ -389,7 +390,7 @@ div#google-maps {
     width: 55%;
   }
   .main-container .center-container .reception-information .location-banner h4 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2.5rem;
   }
 }
