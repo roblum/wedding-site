@@ -3,7 +3,7 @@ module.exports = function (grunt) {
       uglify: {
             counter: {
                 files: {
-                    'js/script.min.js': ['js/script.js']
+                    'public/js/script.min.js': ['public/js/script.js']
                 }
                 ,options: {
                     banner: '/* chris & tiff 2015 - <%= grunt.template.today() %> */'
@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         },
         watch: {
             less : {
-              files: ['css/main.less']
+              files: ['public/css/main.less']
               ,tasks: ['less']
             },
         },
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
   less: {
       dist: {
           files: {
-            'css/styles.css': ['css/main.less']
+            'public/css/styles.css': ['public/css/main.less']
           }
       },
     },
