@@ -18,6 +18,7 @@
 					$(this).addClass('animated fadeOut').hide();
 					map.panTo(chelsea)
 					map.setZoom(15);
+					map.setOptions(mapOptionsLoaded);
 					gMaps._addMarker();
 			});
 		},
@@ -38,8 +39,21 @@
 			latitude: 40.74757,
 			longitude: -74.008509,
 		},
+		closeZoom : 15,
 		pin : './images/lighthouse_shadow.png'
 	}
+
+	var mapOptions = {
+     	center: { lat: gMapsData.startLocation.latitude, lng: gMapsData.startLocation.longitude},
+     	zoom: gMapsData.zoom,
+     	styles: gMapStyles,
+	};
+
+	var mapOptionsLoaded = {
+     	center: { lat: gMapsData.chelseaLocation.latitude, lng: gMapsData.chelseaLocation.longitude},
+     	zoom: gMapsData.closeZoom,
+     	styles: gMapStylesLoaded,
+	};
 
 	var gMaps = {
 		_init: function(){
@@ -47,7 +61,7 @@
 	          	center: { lat: gMapsData.startLocation.latitude, lng: gMapsData.startLocation.longitude},
 	          	zoom: gMapsData.zoom,
 	          	styles: gMapStyles,
-        	};
+        		};
 
 	        	map = new google.maps.Map(document.getElementById('google-maps'), mapOptions);
 		},
