@@ -1,5 +1,7 @@
-@lpurple : #e5e4f0;
-@dpurple : #a19be0;
+// @lpurple : #e5e4f0;
+// @dpurple : #a19be0;
+@lpurple: #C3C3E5;
+@dpurple: #8C489F;
 
 @lpink : #f6cec7;
 @dpink : #f2a797;
@@ -16,6 +18,11 @@ div#google-maps {
 	height: 100%;
 	width: 100%;
 }
+.lighthouse{
+     width: 60px;
+     height: 110px;
+     background-size: 100% 100%;
+}
 
 /*
  * Smart Phones - Mobile First
@@ -29,6 +36,12 @@ div#google-maps {
 	background: rgba(255,255,255,0.8);
 	cursor: pointer;
 
+     h1{
+          text-align: center;
+          font-family: 'Satisfy', cursive;
+          color: @dpurple;
+          font-size: 2rem;
+     }
 	.header{
 		width: 100%;
 		height: 4rem;
@@ -40,7 +53,8 @@ div#google-maps {
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			border-top: 6px dashed @lpurple;
+               border: 0px;
+			border-top: 3px solid @lpurple;
 		}
 	}
 	.center-container{
@@ -48,8 +62,8 @@ div#google-maps {
 		top: 10%;
 		margin: auto;
 		width: 100%;
-		
-		.splash-container{	
+
+		.splash-container{
 			width: 65%;
 			margin: auto;
 
@@ -89,6 +103,9 @@ div#google-maps {
 					padding: 0 30px;
 					line-height: 5rem;
 					padding: 0 15px;
+                         -webkit-box-shadow: 1px -1px 19px 0px rgba(0,0,0,0.15);
+                         -moz-box-shadow: 1px -1px 19px 0px rgba(0,0,0,0.15);
+                         box-shadow: 1px -1px 19px 0px rgba(0,0,0,0.15);
 
 					h2{
 						font-size: 3rem;
@@ -109,7 +126,7 @@ div#google-maps {
 				}
 		/*
 		 * Banner Strip Before:After Start
-		 */ 
+		 */
 				.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
 					content: " ";
 					position: absolute;
@@ -147,7 +164,7 @@ div#google-maps {
 				}
 		/*
 		 * Banner Strip Before:After End
-		 */ 
+		 */
 
 			}
 		}
@@ -166,12 +183,12 @@ div#google-maps {
 				color: @dpurple;
 			}
 			.cursive{
-				font-family: 'Norican', cursive;
+				font-family: 'Satisfy', cursive;
 				text-transform: none;
 				font-size: 1.5rem;
 				letter-spacing: 1.8px;
 				text-shadow: 1px 1px 3px #ccc;
-			}	
+			}
 			.time-container{
 
 				hr, p{
@@ -193,6 +210,8 @@ div#google-maps {
 			.location-banner{
 				background: @lpurple;
 				text-shadow: 1px 1px 1px #ccc;
+                    width: 75%;
+                    margin: auto;
 
 				.left-wing:before, .left-wing:after, .right-wing:before, .right-wing:after {
 					position: absolute;
@@ -213,13 +232,55 @@ div#google-maps {
 
 				h4{
 					color: #fff;
+                         line-height: 1.5rem;
 				}
 			}
 		}
 	}
 }
+
 /*
- * Tablets 
+* Modal CSS
+*/
+.modal {
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 1040;
+     display: none;
+     overflow: hidden;
+     -webkit-overflow-scrolling: touch;
+     outline: 0;
+}
+.fade {
+     opacity: 0;
+     -webkit-transition: opacity .15s linear;
+     -o-transition: opacity .15s linear;
+     transition: opacity .15s linear;
+}
+.fade.in {
+     opacity: 1;
+}
+.modal-backdrop {
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     background-color: #000;
+}
+.modal-backdrop.in {
+     filter: alpha(opacity=50);
+     opacity: .5;
+}
+.modal-open .modal {
+     overflow-x: hidden;
+     overflow-y: auto;
+}
+
+/*
+ * Tablets
  */
 @media(min-width:481px){
 	.main-container{
@@ -230,8 +291,8 @@ div#google-maps {
 
 				.banner-container{
 
-					
-					
+
+
 				}
 			}
 
@@ -241,17 +302,22 @@ div#google-maps {
 				h2{
 					font-size: 2rem;
 				}
+                    .cursive{
+                         font-size: 2rem;
+                    }
 				.time-container{
 
 					p{
 						font-size: 1.7rem;
 						width: 50%;
+                              margin: 0;
 					}
 				}
 				.location-banner{
 
 					h4{
 						font-size: 1.5rem;
+                              line-height: 2rem;
 					}
 				}
 			}
@@ -265,6 +331,9 @@ div#google-maps {
 @media(min-width:769px){
 	.main-container{
 
+          h1{
+               font-size: 3rem;
+          }
 		.center-container{
 
 			.splash-container{
@@ -304,7 +373,7 @@ div#google-maps {
 					}
 			/*
 			 * Banner Strip Before:After Start
-			 */ 
+			 */
 					.banner-left-strip:before, .banner-left-strip:after, .banner-right-strip:before, .banner-right-strip:after{
 						content: " ";
 						position: absolute;
@@ -342,7 +411,7 @@ div#google-maps {
 					}
 			/*
 			 * Banner Strip Before:After End
-			 */ 
+			 */
 				}
 			}
 
@@ -352,6 +421,9 @@ div#google-maps {
 				h2{
 					font-size: 3rem;
 				}
+                    .curisve{
+                         font-size: 2.5rem;
+                    }
 				.time-container{
 
 					p{
@@ -360,9 +432,11 @@ div#google-maps {
 					}
 				}
 				.location-banner{
+                         width: 55%;
 
 					h4{
 						font-size: 2rem;
+                              line-height: 2.5rem;
 					}
 				}
 			}
