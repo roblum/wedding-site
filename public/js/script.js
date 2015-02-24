@@ -40,7 +40,8 @@
 			longitude: -74.008509,
 		},
 		closeZoom : 15,
-		pin : './images/lighthouse_shadow.png'
+		pin : './images/lighthouse_shadow.png',
+		glow : './images/light_glow.png'
 	}
 
 	var mapOptions = {
@@ -53,6 +54,7 @@
      	center: { lat: gMapsData.chelseaLocation.latitude, lng: gMapsData.chelseaLocation.longitude},
      	zoom: gMapsData.closeZoom,
      	styles: gMapStylesLoaded,
+     	minZoom: 2,
 	};
 
 	var gMaps = {
@@ -74,7 +76,9 @@
 			var cMarker = new RichMarker({
                   	position: chelsea,
 	        		map: map,
-                    content: '<div class="lighthouse" style="background-image:url(' + gMapsData.pin + ');"></div>'
+                    content: '<div class="lighthouse" style="background-image:url(' + gMapsData.pin + ');">'
+                    			+ '<img class="glow blink" src="' + gMapsData.glow + '"/>'
+                    			+ '</div>'
                });
 
  	          cMarker.setMap(map);

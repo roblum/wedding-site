@@ -16,6 +16,12 @@ div#google-maps {
   height: 110px;
   background-size: 100% 100%;
 }
+.glow {
+  position: absolute;
+  top: -10%;
+  left: -97%;
+  width: 300%;
+}
 /*
  * Smart Phones - Mobile First
  */
@@ -250,6 +256,34 @@ div#google-maps {
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
+.modal .modal-body {
+  width: 80%;
+  margin: 15px auto;
+  z-index: 99;
+  position: relative;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 1px 1px 10px 1px #3F3F3F;
+  -moz-box-shadow: 1px 1px 10px 1px #3F3F3F;
+  -ms-box-shadow: 1px 1px 10px 1px #3F3F3F;
+  -o-box-shadow: 1px 1px 10px 1px #3F3F3F;
+  box-shadow: 1px 1px 10px 1px #3F3F3F;
+}
+.modal .modal-body img {
+  width: 100%;
+}
+.modal .modal-body .couple-container {
+  width: 100%;
+  margin: auto;
+}
+.modal .modal-body .story-container {
+  padding: 5px;
+  color: #000;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity .15s linear;
@@ -408,6 +442,9 @@ div#google-maps {
     font-size: 1.6rem;
     line-height: 2.5rem;
   }
+  .modal .modal-body {
+    width: 650px;
+  }
 }
 @media (min-width: 1200px) {
   .main-container .center-container .splash-container {
@@ -512,6 +549,28 @@ div#google-maps {
     transform: translate3d(0, -2000px, 0);
   }
 }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -547,4 +606,21 @@ div#google-maps {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+.blink {
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 2.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: blink;
+  -moz-animation-timing-function: ease-in-out;
 }
