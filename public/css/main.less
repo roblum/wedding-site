@@ -279,6 +279,7 @@ div#google-maps {
           position: relative;
           padding: 15px 0;
           background: rgba(255, 255, 255, 0.85);
+          //overflow: auto;
           -webkit-box-shadow: 1px 1px 10px 1px #3F3F3F;
           -moz-box-shadow: 1px 1px 10px 1px #3F3F3F;
           -ms-box-shadow: 1px 1px 10px 1px #3F3F3F;
@@ -288,17 +289,65 @@ div#google-maps {
           img{
                width: 100%;
           }
+          button.close {
+              background: rgba(0,0,0,0.7);
+              border: 1px solid white;
+              border-radius: 100px;
+              position: relative;
+              margin-top: -15px;
+              float: right;
+              top: -10px;
+              right: -10px;
+              color: #fff;
+              cursor: pointer;
+          }
           .couple-container {
                width: 100%;
                margin: auto;
           }
+          .story-banner{
+               
+               h2{
+                    font-family: 'Satisfy', sans-serif;
+                    text-align: center;
+                    background: @dpurple;
+                    position: relative;
+                    width: 100%;
+                    margin-left: -0.5em;
+                    font-size: 2rem;
+                    color: white;
+                    line-height: 3rem;
+               }
+               h2:before {
+                   width: 0.5em;
+                   height: 100%;
+                   top: -10px;
+                   left: -0.5em;
+                   position: absolute;
+                   content: "";
+                   border-top: 0.4em solid transparent;
+                   border-right: 0.5em solid #000;
+                   z-index: -1;
+               }
+          }
           .story-container {
-               padding: 5px;
+               padding: 5px 15px;
                color: #000;
                text-align: center;
                font-size: 1.2rem;
                line-height: 1.5rem;
                font-family: 'Roboto', sans-serif;
+
+               
+              .back-home{
+                   cursor: pointer;
+                   float: right;
+                   width: 80px;
+                   font-size: 1rem;
+                   line-height: 2rem;
+                   font-family: 'Satisfy', cursive;
+                   color: @dpurple;
+              }
           }
      }
 }

@@ -5,10 +5,11 @@
 		gMaps._init();
 		events._mainContainer();
 		events._pin();
+        events._backHome();
 	}
 
 	var events = {
-		_mainContainer: function(){
+		_mainContainer: function() {
 			$('.main-container').click(function(){
 				var chelsea = new google.maps.LatLng(
 									gMapsData.chelseaLocation.latitude,
@@ -22,11 +23,19 @@
 					gMaps._addMarker();
 			});
 		},
-		_pin: function(){
-			$('body').on('click touchstart', '.lighthouse', function(){
-					$('#event-modal').modal('show');
+		_pin: function() {
+			$('body').on('click touchstart', '.lighthouse', function() {
+				$('#event-modal').modal('show');
 			});
-		}
+		},
+        _backHome: function() {
+            $('body').on('click touchstart', '.back-home', function() {
+                $('#event-modal').modal('hide');
+                $('.main-container').removeClass('fadeOut')
+                                    .fadeIn();
+                map.setOptions(mapOptions);                    
+            });
+        },
 	}
 
 	var gMapsData = {
