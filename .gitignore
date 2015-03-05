@@ -2,3 +2,7 @@ node_modules
 **/*.psd
 *.psd
 .DS_Store
+images/*
+public/images/*
+public/.DS_Store
+
