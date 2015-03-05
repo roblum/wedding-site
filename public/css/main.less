@@ -29,6 +29,24 @@ div#google-maps {
      left: -97%;
      width: 300%;
 }
+.back-home.map {
+	position: absolute;
+	bottom: 1%;
+	right: 1%;
+	z-index: 99;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5px 10px;
+	color: @dpurple;
+	font-size: 1rem;
+   	line-height: 2rem;
+   	border-radius: 3px;
+	border: 1px solid #F5F5F5;
+	box-shadow: 1px 1px 4px 0px #C8C8C8;
+   	font-family: 'Satisfy', cursive;
+	cursor: pointer;
+	z-index: 9999;
+	display: none;
+}
 
 /*
  * Smart Phones - Mobile First
@@ -304,6 +322,23 @@ div#google-maps {
           .couple-container {
                width: 100%;
                margin: auto;
+
+           		.owl-controls .owl-buttons div {
+					border-radius: 3px;
+					top: 45%;
+					position: absolute;
+					padding: 10px 20px;
+					font-family: 'Roboto' sans-serif;
+					font-size: 2rem;
+					font-style: normal;
+					line-height: 2.5rem;
+           		}
+           		.owl-controls .owl-buttons .owl-next {
+					right: 0;
+           		}
+           		.owl-controls .owl-buttons .owl-prev {
+           			left: 0;
+           		}
           }
           .story-banner{
                
@@ -734,20 +769,20 @@ div#google-maps {
 }
 
 .blink {
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
-    transition: all 2s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    -ms-transition: all 3s ease-in-out;
+    transition: all 3s ease-in-out;
 
     -webkit-animation-direction: normal;
-    -webkit-animation-duration: 2.5s;
+    -webkit-animation-duration: 3.5s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-name: blink;
     -webkit-animation-timing-function: ease-in-out;
 
     -moz-animation-direction: normal;
-    -moz-animation-duration: 2.5s;
+    -moz-animation-duration: 3.5s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-name: blink;
     -moz-animation-timing-function: ease-in-out;

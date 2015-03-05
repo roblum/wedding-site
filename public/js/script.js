@@ -5,12 +5,16 @@
 		gMaps._init();
 		events._mainContainer();
 		events._pin();
-        events._backHome();
+       	events._backHome();
+       	events._closeModal();
+		owlInit();
 	}
 
 	var events = {
 		_mainContainer: function() {
 			$('.main-container').click(function(){
+				$('.back-home.map').fadeIn();
+
 				var chelsea = new google.maps.LatLng(
 									gMapsData.chelseaLocation.latitude,
 									gMapsData.chelseaLocation.longitude
@@ -25,17 +29,24 @@
 		},
 		_pin: function() {
 			$('body').on('click touchstart', '.lighthouse', function() {
+				$('.back-home.map').fadeOut();
 				$('#event-modal').modal('show');
 			});
 		},
         _backHome: function() {
             $('body').on('click touchstart', '.back-home', function() {
+            	$('.back-home.map').fadeOut();
                 $('#event-modal').modal('hide');
                 $('.main-container').removeClass('fadeOut')
                                     .fadeIn();
                 map.setOptions(mapOptions);                    
             });
         },
+        _closeModal: function() {
+        	$('#event-modal').on('click', '.modal-backdrop, .close', function() {
+    			$('.back-home.map').fadeIn();
+        	});
+        }
 	}
 
 	var gMapsData = {
@@ -94,6 +105,16 @@
 		},
 	}
 
+	var owlInit = function() {
+		$('.couple-container').owlCarousel({
+			singleItem: true,
+			autoPlay: 3000, 
+			lazyLoad: true,
+			navigationText: ['<','>'],
+			navigation: true,
+			stopOnHover: true,
+		});
+	}
 	google.maps.event.addDomListener(window, 'load', __init__);
 })(jQuery);
 
