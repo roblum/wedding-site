@@ -375,15 +375,14 @@ div#google-maps {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #000;
 }
 .modal-backdrop.in {
   filter: alpha(opacity=50);
   opacity: .5;
 }
 .modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
 }
 /*
  * Tablets
